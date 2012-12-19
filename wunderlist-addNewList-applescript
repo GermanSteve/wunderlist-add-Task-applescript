@@ -1,0 +1,15 @@
+on run
+  set inputText to text returned of (display dialog "Enter task" default answer "" buttons {"Cancel", "Add"} default button 2)
+	set the clipboard to inputText
+	tell application "Wunderlist"
+		activate
+		tell application "System Events"
+			tell process "Wunderlist"
+				keystroke "i" using {command down}
+				keystroke "n" using {command down}
+				keystroke "v" using {command down}
+				keystroke (ASCII character 3)
+			end tell
+		end tell
+	end tell
+end run
