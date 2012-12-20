@@ -5,7 +5,6 @@ on run
 		activate
 		tell application "System Events"
 			tell process "Wunderlist"
-				keystroke "i" using {command down}
 				keystroke "n" using {command down}
 				keystroke "v" using {command down}
 				keystroke (ASCII character 3)
